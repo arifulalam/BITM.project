@@ -18,6 +18,11 @@ namespace UoUWebApp.Controllers
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
+        public ActionResult Index()
+        {
+            return RedirectToAction("login");
+        }
+
         public AccountController()
         {
         }

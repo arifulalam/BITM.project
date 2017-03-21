@@ -13,10 +13,28 @@ namespace UoUWebApp
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            /*routes.MapRoute(
+                name: "About",
+                url: "About/{id}",
+                defaults: new { controller = "Home", action = "About", id = UrlParameter.Optional }
+            );
+
             routes.MapRoute(
-                name: "Default",
+                name: "Contact",
+                url: "Contact/{id}",
+                defaults: new { controller = "Home", action = "Contact", id = UrlParameter.Optional }
+            );*/
+
+            routes.MapRoute(
+                name: "Dashboard",
+                url: "Dashboard/{id}",
+                defaults: new { controller = "Index", action = "Dashboard", id = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
+                name: "Index",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Index", action = "Index", id = UrlParameter.Optional }
             );
         }
     }
